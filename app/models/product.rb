@@ -20,5 +20,26 @@ with: %r{\.(gif|jpg|png)\Z}i,		#this condn is for image url and its check that t
 
 
 
+def self.latest
+Product.order(:updated_at).last
+end
+
+has_many :line_items
+before_destroy :ensure_not_referenced_by_any_line_item
+
+private
+# ensure that there are no line items referencing this product
+def ensure_not_referenced_by_any_line_item
+	if line_items.empty?
+	   return true         #true means it destroy the row from database
+       else
+		errors.add(:base, 'Line Items present')
+	   return false            # here the row will not be destroyed.
+	end
+     end
+ 
 
 end
+
+
+
