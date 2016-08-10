@@ -4,6 +4,7 @@
 
 class Product < ActiveRecord::Base
 
+
 validates :name, :description, :image_url, presence: true  #validates is used to check  the name field of model against its condn 
 				                # presence: true tells the validator to check that each of the named fields is present
                                                 # and its contents should  not be empty
@@ -24,6 +25,7 @@ def self.latest
 Product.order(:updated_at).last
 end
 
+has_many :orders, through: :line_items
 has_many :line_items
 before_destroy :ensure_not_referenced_by_any_line_item
 
