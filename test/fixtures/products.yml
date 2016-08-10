@@ -1,10 +1,10 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 one:
-name:  MyString
-description:  MyText
-image_url: MyString
-price: 9.99
+name: Dave Thomas
+address: MyText
+email: dave@example.org
+pay_type: Check
 
 two:
 name:  MyString
