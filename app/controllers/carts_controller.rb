@@ -63,9 +63,10 @@ rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
    @cart.destroy if @cart.id == session[:cart_id]
    session[:cart_id] = nil
 
-            #@cart.destroy
+            @cart.destroy
      respond_to do |format|
-     format.html { redirect_to store_url, notice: 'Your cart is currently empty' }
+       format.html { redirect_to store_url }
+            #format.html { redirect_to store_url, notice: 'Your cart is currently empty' }
             #format.html { redirect_to carts_url, notice: 'Cart was successfully destroyed.' }
       format.json { head :no_content }
     end
