@@ -48,14 +48,13 @@ Rails.application.configure do
 config.action_mailer.delivery_method = :smtp   # add this block for mails sending envmnt
 config.action_mailer.smtp_settings = {
 
-address: "smtp.gmail.com",
-port: 587,
-domain:"gmail.com",
-user_name: "dharmjeetkr@gmail.com",
-password:"9934945342",
-authentication: "plain",
-enable_starttls_auto: true
-}
-
+	address: "smtp.gmail.com",
+	port: 587,
+	domain:"gmail.com",
+	user_name: "dharmjeetkr@gmail.com",
+	password:"9934945342",
+	authentication: "plain",
+	enable_starttls_auto: true
+    }
 
 end

@@ -1,4 +1,7 @@
 class OrdersController < ApplicationController
+
+  skip_before_action :authorize, only: [:new, :create]
+
   include CurrentCart       #this 2 line include when error shows that line_item nil for nil class that is @cart is nil
   before_action :set_cart, only: [:new, :create]
 
