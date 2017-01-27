@@ -10,6 +10,9 @@ before_action :authorize
 	end
  end
 
+
+
+
 end
 
   

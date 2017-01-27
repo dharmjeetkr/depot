@@ -1,10 +1,10 @@
-<h1>Store#index</h1>
-<p>Find me in app/views/store/index.html.erb</p>
+ <h1>Store#index</h1>
+<!--<p>Find me in app/views/store/index.html.erb</p>-->
 
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Your Pragmatic Catalog</h1>
+<center><h1>Your products Catalog</h1></center>
 <% cache ['store', Product.latest] do %>
 
 <% @products.each do |product| %>

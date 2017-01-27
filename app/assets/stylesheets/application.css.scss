@@ -16,7 +16,7 @@
 
 #banner {
 		background: #9c9;
-		padding: 10px;
+		padding: 15px;
 		border-bottom: 2px solid;
 		font: small-caps 40px/40px "Times New Roman", serif;
 		color: #282;
@@ -24,6 +24,7 @@
 	}
 img {
 	float: left;
+
      }
 #notice {
 		color: #000 !important;
@@ -34,17 +35,17 @@ img {
 		font: bold smaller sans-serif;
 	}
 #columns {
-		background: #141;
+		background: green;
 #main {
-		margin-left: 17em;
+		margin-left: 18em;
 		padding: 1em;
 		background: white;
 	}
 #side {
 		float: left;
-		padding: 1em 2em;
-		width: 13em;
-		background: #141;
+		padding: 5em 2em;
+		width: 14em;
+		background: green;
 
       form, div {
 		display: inline;
@@ -57,8 +58,7 @@ img {
 		color: white;
 			
 	table {
-		border-top:
-		1px dotted #595;
+		border-top: 1px dotted #595;
 		border-bottom: 1px dotted #595;
 		margin-bottom: 10px;
 

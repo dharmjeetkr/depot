@@ -39,6 +39,10 @@ group :development, :test do
  gem 'cancan', '1.6.9'
  gem 'carrierwave', '0.8.0'
  gem 'bcrypt', '~>3.1.0'
+ #gem 'credit_card_validations'
+ #gem 'rmagick'
+ gem "mini_magick"
+ gem 'better_errors'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
