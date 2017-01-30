@@ -39,7 +39,7 @@ group :development, :test do
  gem 'cancan', '1.6.9'
  gem 'carrierwave', '0.8.0'
 
- gem 'bcrypt'
+ gem 'bcrypt','3.1.11'
  #gem 'credit_card_validations'
  #gem 'rmagick'
  gem "mini_magick"

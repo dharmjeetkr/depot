@@ -175,7 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt
+  bcrypt (= 3.1.11)
   better_errors
   byebug
   cancan (= 1.6.9)
