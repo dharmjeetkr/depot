@@ -41,7 +41,7 @@ group :development, :test do
 
  gem 'bcrypt'  #not worked for deploy
 
-gem 'bcrypt-ruby', '3.1.5'
+gem 'bcrypt'
  #gem 'credit_card_validations'
  #gem 'rmagick'
  gem "mini_magick"
