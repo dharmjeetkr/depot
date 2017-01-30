@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'pg'                     #change sqlite to pg for deployement on heroku
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,6 +38,7 @@ group :development, :test do
  gem 'rspec-rails', "~>2.14"
  gem 'cancan', '1.6.9'
  gem 'carrierwave', '0.8.0'
+
  gem 'bcrypt'
  #gem 'credit_card_validations'
  #gem 'rmagick'
