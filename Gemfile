@@ -39,7 +39,9 @@ group :development, :test do
  gem 'cancan', '1.6.9'
  gem 'carrierwave', '0.8.0'
 
- gem 'bcrypt'
+ gem 'bcrypt'  #not worked for deploy
+
+gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
  #gem 'credit_card_validations'
  #gem 'rmagick'
  gem "mini_magick"
