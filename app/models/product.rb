@@ -19,7 +19,8 @@ with: %r{\.(gif|jpg|png)\Z}i,		#this condn is for image url and its check that t
 	message: 'must be a URL for GIF, JPG or PNG image.'
 }
 
-
+has_attached_file :image, styles: {medium:"300x300>",thumb:"100x100>"}
+validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
 def self.latest
 Product.order(:updated_at).last

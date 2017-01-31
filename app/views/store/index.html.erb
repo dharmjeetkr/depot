@@ -1,25 +1,29 @@
  <h1>Store#index</h1>
-<!--<p>Find me in app/views/store/index.html.erb</p>-->
+ <!--<p>Find me in app/views/store/index.html.erb</p>-->
 
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
-<center><h1>Your products Catalog</h1></center>
-<% cache ['store', Product.latest] do %>
+ <% if notice %>
+ <p id="notice"><%= notice %></p>
+ <% end %>
+ 
+ 		<center><h1>Your products Catalog</h1></center>
+ 		<% cache ['store', Product.latest] do %>
 
-<% @products.each do |product| %>
-<% cache ['entry', product] do %>
-<div class="entry">
-<%= image_tag(product.image_url) %>
-<h3><%= product.name %></h3>
-<%= sanitize(product.description) %>  
-<div class="price_line">
+        
+        <% @products.each do |product| %>
+ 		<% cache ['entry', product] do %>
+ 		<div class="entry">
+ 			
+ 			<%= image_tag(product.image_url) %>
+ 			<%= image_tag product.image.url(:thumb) %>
+ 			<h3><%= product.name %></h3>
+ 			<%= sanitize(product.description) %>
 
-<span class="price"><%= number_to_currency(product.price) %></span>
-   <%= button_to "Add to cart", line_items_path(product_id: product), remote: true  %>  
+ 			<div class="price_line">
+ 				<span class="price"><%= number_to_currency(product.price) %></span>
+ 				<%= button_to "Add to cart", line_items_path(product_id: product), remote: true  %>  
 
-</div>
-</div>
-<% end %>
-<% end %>
-<% end %>
+ 			</div>
+ 		</div>
+ 		<% end %>
+ 		<% end %>
+ 		<% end %>

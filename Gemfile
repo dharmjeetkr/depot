@@ -34,12 +34,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test, :production do
+group :development, :test, :production do  #here add :production for deployment support
  gem 'rspec-rails', "~>2.14"
  gem 'cancan', '1.6.9'
  gem 'carrierwave', '0.8.0'
-
+ 
  gem 'bcrypt','3.1.11'
+ gem 'paperclip'
  #gem 'credit_card_validations'
  #gem 'rmagick'
  gem "mini_magick"
